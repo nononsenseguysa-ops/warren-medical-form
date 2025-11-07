@@ -117,23 +117,164 @@ FORM_HTML = """
             </div>
         </div>
 
-        <!-- MEDICAL QUESTIONS 11.1 to 11.14 -->
+        <!-- MEDICAL QUESTIONS -->
         <div class="form-section">
             <h2>11. Medical Underwriting Questions</h2>
             <p>Please answer <strong>ALL</strong> questions. If "Yes", provide full details.</p>
 
-            {% for i in range(1, 15) %}
-            <h3>11.{{ i }} {{ questions[i-1] }}</h3>
-            <label class="yes-no"><input type="radio" name="q11_{{ i }}" value="yes" onclick="toggleDetails('q11_{{ i }}_details', true)"> Yes</label>
-            <label class="yes-no"><input type="radio" name="q11_{{ i }}" value="no" onclick="toggleDetails('q11_{{ i }}_details', false)" required> No</label><br>
-            <div id="q11_{{ i }}_ thy_details" class="details">
-                <label>Symptoms/Diagnosis:</label><textarea name="q11_{{ i }}_symptoms" rows="2"></textarea><br>
-                <label>Date First Diagnosed:</label><input type="date" name="q11_{{ i }}_first"><br>
-                <label>Last Consultation:</label><input type="date" name="q11_{{ i }}_last"><br>
-                <label>Medicine & Dosage:</label><textarea name="q11_{{ i }}_medicine" rows="2"></textarea><br>
-                <label>Last Treatment:</label><input type="date" name="q11_{{ i }}_treatment">
+            <h3>11.1 Tumours, growths, cancerous or non-cancerous conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_1" value="yes" onclick="toggleDetails('q11_1_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_1" value="no" onclick="toggleDetails('q11_1_details', false)" required> No</label><br>
+            <div id="q11_1_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_1_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_1_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_1_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_1_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_1_treatment">
             </div>
-            {% endfor %}
+
+            <h3>11.2 Heart and circulation conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_2" value="yes" onclick="toggleDetails('q11_2_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_2" value="no" onclick="toggleDetails('q11_2_details', false)" required> No</label><br>
+            <div id="q11_2_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_2_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_2_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_2_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_2_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_2_treatment">
+            </div>
+
+            <h3>11.3 Diabetes and sugar-related disorders?</h3>
+            <label class="yes-no"><input type="radio" name="q11_3" value="yes" onclick="toggleDetails('q11_3_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_3" value="no" onclick="toggleDetails('q11_3_details', false)" required> No</label><br>
+            <div id="q11_3_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_3_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_3_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_3_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_3_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_3_treatment">
+            </div>
+
+            <h3>11.4 Respiratory conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_4" value="yes" onclick="toggleDetails('q11_4_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_4" value="no" onclick="toggleDetails('q11_4_details', false)" required> No</label><br>
+            <div id="q11_4_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_4_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_4_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_4_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_4_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_4_treatment">
+            </div>
+
+            <h3>11.5 Ear, nose and throat conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_5" value="yes" onclick="toggleDetails('q11_5_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_5" value="no" onclick="toggleDetails('q11_5_details', false)" required> No</label><br>
+            <div id="q11_5_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_5_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_5_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_5_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_5_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_5_treatment">
+            </div>
+
+            <h3>11.6 Eye conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_6" value="yes" onclick="toggleDetails('q11_6_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_6" value="no" onclick="toggleDetails('q11_6_details', false)" required> No</label><br>
+            <div id="q11_6_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_6_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_6_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_6_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_6_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_6_treatment">
+            </div>
+
+            <h3>11.7 Digestive system conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_7" value="yes" onclick="toggleDetails('q11_7_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_7" value="no" onclick="toggleDetails('q11_7_details', false)" required> No</label><br>
+            <div id="q11_7_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_7_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_7_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_7_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_7_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_7_treatment">
+            </div>
+
+            <h3>11.8 Urinary system conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_8" value="yes" onclick="toggleDetails('q11_8_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_8" value="no" onclick="toggleDetails('q11_8_details', false)" required> No</label><br>
+            <div id="q11_8_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_8_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_8_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_8_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_8_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_8_treatment">
+            </div>
+
+            <h3>11.9 Nervous system conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_9" value="yes" onclick="toggleDetails('q11_9_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_9" value="no" onclick="toggleDetails('q11_9_details', false)" required> No</label><br>
+            <div id="q11_9_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_9_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_9_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_9_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_9_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_9_treatment">
+            </div>
+
+            <h3>11.10 Musculoskeletal conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_10" value="yes" onclick="toggleDetails('q11_10_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_10" value="no" onclick="toggleDetails('q11_10_details', false)" required> No</label><br>
+            <div id="q11_10_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_10_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_10_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_10_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_10_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_10_treatment">
+            </div>
+
+            <h3>11.11 Endocrine system conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_11" value="yes" onclick="toggleDetails('q11_11_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_11" value="no" onclick="toggleDetails('q11_11_details', false)" required> No</label><br>
+            <div id="q11_11_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_11_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_11_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_11_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_11_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_11_treatment">
+            </div>
+
+            <h3>11.12 Blood disorders?</h3>
+            <label class="yes-no"><input type="radio" name="q11_12" value="yes" onclick="toggleDetails('q11_12_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_12" value="no" onclick="toggleDetails('q11_12_details', false)" required> No</label><br>
+            <div id="q11_12_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_12_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_12_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_12_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_12_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_12_treatment">
+            </div>
+
+            <h3>11.13 Mental health conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_13" value="yes" onclick="toggleDetails('q11_13_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_13" value="no" onclick="toggleDetails('q11_13_details', false)" required> No</label><br>
+            <div id="q11_13_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_13_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_13_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_13_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_13_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_13_treatment">
+            </div>
+
+            <h3>11.14 Any other conditions?</h3>
+            <label class="yes-no"><input type="radio" name="q11_14" value="yes" onclick="toggleDetails('q11_14_details', true)"> Yes</label>
+            <label class="yes-no"><input type="radio" name="q11_14" value="no" onclick="toggleDetails('q11_14_details', false)" required> No</label><br>
+            <div id="q11_14_details" class="details">
+                <label>Symptoms/Diagnosis:</label><textarea name="q11_14_symptoms" rows="2"></textarea><br>
+                <label>Date First Diagnosed:</label><input type="date" name="q11_14_first"><br>
+                <label>Last Consultation:</label><input type="date" name="q11_14_last"><br>
+                <label>Medicine & Dosage:</label><textarea name="q11_14_medicine" rows="2"></textarea><br>
+                <label>Last Treatment:</label><input type="date" name="q11_14_treatment">
+            </div>
         </div>
 
         <button type="submit">Submit & Download PDF</button>
@@ -141,23 +282,6 @@ FORM_HTML = """
 </body>
 </html>
 """
-
-QUESTIONS = [
-    "Tumours, growths, cancerous or non-cancerous conditions?",
-    "Heart and circulation conditions?",
-    "Diabetes and sugar-related disorders?",
-    "Respiratory conditions?",
-    "Ear, nose and throat conditions?",
-    "Eye conditions?",
-    "Digestive system conditions?",
-    "Urinary system conditions?",
-    "Nervous system conditions?",
-    "Musculoskeletal conditions?",
-    "Endocrine system conditions?",
-    "Blood disorders?",
-    "Mental health conditions?",
-    "Any other conditions?"
-]
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -169,10 +293,8 @@ def index():
         buffer = io.BytesIO()
         doc = SimpleDocTemplate(buffer, pagesize=letter)
         styles = getSampleStyleSheet()
-        story = []
-        story.append(Paragraph("Warren Heroldt - Medical Aid Application", styles['Title']))
+        story = [Paragraph("Warren Heroldt - Medical Aid Application", styles['Title'])]
         story.append(Paragraph(f"Submitted: {data['submitted']}", styles['Normal']))
-        story.append(Paragraph(f"Contact: Warren Heroldt, Cell: 082 336 2414", styles['Normal']))
         story.append(Spacer(1, 12))
         for k, v in data.items():
             if v and k != 'submitted':
@@ -181,35 +303,37 @@ def index():
         doc.build(story)
         buffer.seek(0)
 
-        # === SEND EMAIL TO WARREN ===
-        sender_email = "warrenh@statusmarketing.co.za"   # ← YOUR EMAIL
-        sender_password = "your_app_password_here"       # ← GMAIL APP PASSWORD
+        # Email to Warren
+        sender_email = "warrenh@statusmarketing.co.za"  # Your email
+        sender_password = "your_app_password_here"  # Replace with Gmail App Password
         recipient = "warrenh@statusmarketing.co.za"
 
         msg = MIMEMultipart()
         msg['From'] = sender_email
         msg['To'] = recipient
-        msg['Subject'] = f"New Medical Form: {data.get('first_names', '')} {data.get('surname', '')}"
+        msg['Subject'] = f"New Medical Aid Application - {data.get('first_names', 'Unknown')} {data.get('surname', 'Unknown')}"
 
+        # Attach PDF
         part = MIMEBase('application', 'octet-stream')
         part.set_payload(buffer.getvalue())
         encoders.encode_base64(part)
         part.add_header('Content-Disposition', f'attachment; filename="Medical_Form_{data.get('surname', 'User')}.pdf"')
         msg.attach(part)
 
+        # Send
         try:
-            with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-                server.login(sender_email, sender_password)
-                server.send_message(msg)
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(sender_email, sender_password)
+            server.send_message(msg)
+            server.quit()
             print("Email sent to Warren")
         except Exception as e:
             print(f"Email failed: {e}")
 
-        # Return PDF to user
-        buffer.seek(0)
         return send_file(buffer, as_attachment=True, download_name=f"WarrenHeroldt_Application_{data.get('surname', 'User')}.pdf", mimetype='application/pdf')
     
-    return render_template_string(FORM_HTML, questions=QUESTIONS)
+    return render_template_string(FORM_HTML)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
